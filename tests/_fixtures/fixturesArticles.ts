@@ -5,12 +5,12 @@ import { ViewArticlePage } from '../../src/ui/pages/article/ViewArticlePage';
 import { generateNewArticleData } from '../../src/common/testData/generateNewArticleData';
 
 export const test = base.extend<{
-  createArticlePage;
-  editArticlePage;
-  viewArticlePage;
-  articleWithoutTags;
-  articleWithOneTag;
-  articleWithTwoTags;
+  createArticlePage: CreateArticlePage;
+  editArticlePage: EditArticlePage;
+  viewArticlePage: ViewArticlePage;
+  articleWithoutTags: ReturnType<typeof generateNewArticleData>;
+  articleWithOneTag:ReturnType<typeof generateNewArticleData>;
+  articleWithTwoTags: ReturnType<typeof generateNewArticleData>;
 }>({
   createArticlePage: async ({ page }, use) => {
     const createArticlePage = new CreateArticlePage(page);
